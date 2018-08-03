@@ -36,14 +36,15 @@ class VideoModuleDemo extends Component {
 
   updateVideo() {
     this.setState({
-      id: 2
+      id: 2,
+      wNVideoCanvasProps[0].SetFlashLiveStream[0].mobileStreams[0].url: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8'
     });
   }
   
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 19 - {this.state.id}</h1> <button onClick={this.updateVideo}>Video2</button>
+        <h1>Video Demo 20 - {this.state.id}</h1> <button onClick={this.updateVideo}>Video2</button>
 	      <Video clipId={this.state.id} autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.wNVideoCanvasProps} />
       </div>
     );
