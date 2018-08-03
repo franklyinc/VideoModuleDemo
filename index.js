@@ -18,10 +18,9 @@ class VideoModuleDemo extends Component {
       SetFlashLiveStream: [{
         strUrl: url,
         strHeadline: 'Bike Video (1)',
-        strSummaryImageUrl: '',
-        mobileStreamCcUrl: url,
-        hasPreroll: true,
         strAdTag: 'Weather - Live Streaming',
+        hasPreroll: true,
+        strSummaryImageUrl: '',
         mobileStreams: [{
           url,
           type: 'video/mp4'
@@ -47,10 +46,9 @@ class VideoModuleDemo extends Component {
       SetFlashLiveStream: [{
         strUrl: url,
         strHeadline: 'Test Video (2)',
-        strSummaryImageUrl: '',
-        mobileStreamCcUrl: url,
-        hasPreroll: true,
         strAdTag: 'Weather - Live Streaming',
+        hasPreroll: true,
+        strSummaryImageUrl: '',
         mobileStreams: [{
           url,
           type: 'video/mp4'
@@ -66,6 +64,7 @@ class VideoModuleDemo extends Component {
     
     await this.setState({ video: '' }); // clear the current video before setting a new one.
 
+    // clipId is required if you are not using FRN_rawResponses
     this.setState({
       video: <Video clipId={2} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />  
     });
@@ -74,7 +73,7 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 29</h1> 
+        <h1>Video Demo</h1> 
         <button onClick={this.updateVideo}>Video2</button>
 	      {this.state.video}
       </div>
