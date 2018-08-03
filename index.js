@@ -15,34 +15,30 @@ class VideoModuleDemo extends Component {
   } // constructor
 
   componentDidMount() {
-    const id = 1;
-    const autoPlay = true;
-    const url = 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8';
-    const headline = 'Video Test 2';
-    const liveStreamInfo = {
-      strUrl: url,
-      strHeadline: headline,
-      strSummaryImageUrl: '',
-      mobileStreamCcUrl: url,
-      hasPreroll: true,
-      strAdTag: 'Weather - Live Streaming',
-      mobileStreams: [{
-        url,
-        type: 'video/mp4'
-      }, {
-        url: '',
-        type: 'video/mp4'
-      }, {
-        url: '',
-        type: 'video/mp4'
-      }]
-    };
+    const url = 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8';
     const wNVideoCanvasProps = [{
-      SetFlashLiveStream: [liveStreamInfo]
+      SetFlashLiveStream: [{
+        strUrl: url,
+        strHeadline: 'Bike Video',
+        strSummaryImageUrl: '',
+        mobileStreamCcUrl: url,
+        hasPreroll: true,
+        strAdTag: 'Weather - Live Streaming',
+        mobileStreams: [{
+          url,
+          type: 'video/mp4'
+        }, {
+          url: '',
+          type: 'video/mp4'
+        }, {
+          url: '',
+          type: 'video/mp4'
+        }]
+      }]
     }];
       
     this.setState({
-      video: <Video clipId={id} autoPlay={autoPlay} wNVideoCanvasProps={wNVideoCanvasProps} />
+      video: <Video clipId={1} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />
     });
   }
   
@@ -77,7 +73,7 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 24 - {this.state.id}</h1> 
+        <h1>Video Demo 25 - {this.state.id}</h1> 
 	      {this.state.video}
       </div>
     );
