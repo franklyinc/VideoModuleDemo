@@ -98,7 +98,7 @@ class VideoModuleDemo extends Component {
           }]
         
         
-      ]
+      ],
       currentVideo: 0
     }; // this.state
     
