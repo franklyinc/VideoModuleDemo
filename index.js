@@ -51,7 +51,55 @@ class VideoModuleDemo extends Component {
     this.state = {
       id: 1,
       autoplay: true,
-      currentVideo: this.wNVideoCanvasProps1
+      wNVideoCanvasPropsArray: [
+        
+        [{
+            SetFlashLiveStream: [{
+                strUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+                strHeadline: 'Encoder 2 Test CBS Stream',
+                strSummaryImageUrl: '',
+                mobileStreamCcUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+                hasPreroll: true,
+                strAdTag: 'Weather - Live Streaming',
+                mobileStreams: [{
+                  url: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+                  type: 'video/mp4'
+                }, {
+                  url: '',
+                  type: 'video/mp4'
+                }, {
+                  url: '',
+                  type: 'video/mp4'
+                }] // mobileStreams
+              }] // SetFlashLiveStream
+          }]
+          
+          ,
+          
+          [{
+            SetFlashLiveStream: [{
+                strUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+                strHeadline: 'Encoder 2 Test CBS Stream',
+                strSummaryImageUrl: '',
+                mobileStreamCcUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+                hasPreroll: true,
+                strAdTag: 'Weather - Live Streaming',
+                mobileStreams: [{
+                  url: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+                  type: 'video/mp4'
+                }, {
+                  url: '',
+                  type: 'video/mp4'
+                }, {
+                  url: '',
+                  type: 'video/mp4'
+                }] // mobileStreams
+              }] // SetFlashLiveStream
+          }]
+        
+        
+      ]
+      currentVideo: 0
     }; // this.state
     
   } // constructor
@@ -60,7 +108,7 @@ class VideoModuleDemo extends Component {
     return (
       <div className='VideoModuleDemo'>	
         <h1>Video Demo : {this.state.currentVideo.strHeadline}</h1>
-	      <Video autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.currentVideo} />
+	      <Video autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.wNVideoCanvasPropsArray[this.state.currentVideo]} />
       </div>
     );
 	  
