@@ -37,14 +37,14 @@ class VideoModuleDemo extends Component {
         id: 2
       }); // setState
 
-    }, 10000);
+    }.bind(this), 10000);
 
   } // constructor
   
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 16 - {this.state.id}</h1>
+        <h1>Video Demo 17 - {this.state.id}</h1>
 	      <Video clipId={this.state.id} autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.wNVideoCanvasProps} />
       </div>
     );
