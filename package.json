@@ -1,0 +1,11 @@
+{
+  "thumbnail": "https://wnow-modules.s3.amazonaws.com/icon_stroke_news_articlelist.svg",
+  "tag": "FranklyCustom",
+  "affiliates":["franklydemo"],
+  "propTypes": {
+    "text": "PropTypes.string"
+  },
+  "defaultProps": {
+    "text": "Welcome to the Video Demo!!"
+  }
+}
