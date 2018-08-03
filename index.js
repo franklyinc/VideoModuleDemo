@@ -27,7 +27,7 @@ class VideoModuleDemo extends Component {
               type: 'video/mp4'
             }] // mobileStreams
           }] // SetFlashLiveStream
-      }]; // wNVideoCanvasProps
+      }] // wNVideoCanvasProps
     }; // this.state
     
   } // constructor
