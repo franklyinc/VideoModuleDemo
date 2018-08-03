@@ -78,14 +78,14 @@ class VideoModuleDemo extends Component {
           
           [{
             SetFlashLiveStream: [{
-                strUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
-                strHeadline: 'Encoder 2 Test CBS Stream',
+                strUrl: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
+                strHeadline: 'Test Video',
                 strSummaryImageUrl: '',
-                mobileStreamCcUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+                mobileStreamCcUrl: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
                 hasPreroll: true,
                 strAdTag: 'Weather - Live Streaming',
                 mobileStreams: [{
-                  url: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+                  url: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
                   type: 'video/mp4'
                 }, {
                   url: '',
