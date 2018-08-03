@@ -5,7 +5,7 @@ class VideoModuleDemo extends Component {
   constructor(props) {
     super(props);
 	  
-    var wNVideoCanvasProps1 = [{
+    this.wNVideoCanvasProps1 = [{
         SetFlashLiveStream: [{
             strUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
             strHeadline: 'Encoder 2 Test CBS Stream',
@@ -26,7 +26,7 @@ class VideoModuleDemo extends Component {
           }] // SetFlashLiveStream
       }]; // wNVideoCanvasProps
 	    
-      var wNVideoCanvasProps2 = [{
+      this.wNVideoCanvasProps2 = [{
         SetFlashLiveStream: [{
             strUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
             strHeadline: 'Encoder 2 Test CBS Stream',
@@ -51,7 +51,7 @@ class VideoModuleDemo extends Component {
     this.state = {
       id: 1,
       autoplay: true,
-      currentVideo: wNVideoCanvasProps1
+      currentVideo: this.wNVideoCanvasProps1
     }; // this.state
     
   } // constructor
