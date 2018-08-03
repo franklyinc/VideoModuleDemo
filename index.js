@@ -51,78 +51,26 @@ class VideoModuleDemo extends Component {
     this.state = {
       id: 1,
       autoplay: true,
-      wNVideoCanvasProps:
-        
-        [{
-            SetFlashLiveStream: [{
-                strUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
-                strHeadline: 'Encoder 2 Test CBS Stream',
-                strSummaryImageUrl: '',
-                mobileStreamCcUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
-                hasPreroll: true,
-                strAdTag: 'Weather - Live Streaming',
-                mobileStreams: [{
-                  url: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
-                  type: 'video/mp4'
-                }, {
-                  url: '',
-                  type: 'video/mp4'
-                }, {
-                  url: '',
-                  type: 'video/mp4'
-                }] // mobileStreams
-              }] // SetFlashLiveStream
-          }]
-      ,
-      wNVideoCanvasPropsArray: [
-        
-        [{
-            SetFlashLiveStream: [{
-                strUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
-                strHeadline: 'Encoder 2 Test CBS Stream',
-                strSummaryImageUrl: '',
-                mobileStreamCcUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
-                hasPreroll: true,
-                strAdTag: 'Weather - Live Streaming',
-                mobileStreams: [{
-                  url: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
-                  type: 'video/mp4'
-                }, {
-                  url: '',
-                  type: 'video/mp4'
-                }, {
-                  url: '',
-                  type: 'video/mp4'
-                }] // mobileStreams
-              }] // SetFlashLiveStream
-          }]
-          
-          ,
-          
-          [{
-            SetFlashLiveStream: [{
-                strUrl: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
-                strHeadline: 'Test Video',
-                strSummaryImageUrl: '',
-                mobileStreamCcUrl: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
-                hasPreroll: true,
-                strAdTag: 'Weather - Live Streaming',
-                mobileStreams: [{
-                  url: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
-                  type: 'video/mp4'
-                }, {
-                  url: '',
-                  type: 'video/mp4'
-                }, {
-                  url: '',
-                  type: 'video/mp4'
-                }] // mobileStreams
-              }] // SetFlashLiveStream
-          }]
-        
-        
-      ],
-      currentVideo: 0
+      wNVideoCanvasProps: [{
+          SetFlashLiveStream: [{
+              strUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+              strHeadline: 'Encoder 2 Test CBS Stream',
+              strSummaryImageUrl: '',
+              mobileStreamCcUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+              hasPreroll: true,
+              strAdTag: 'Weather - Live Streaming',
+              mobileStreams: [{
+                url: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+                type: 'video/mp4'
+              }, {
+                url: '',
+                type: 'video/mp4'
+              }, {
+                url: '',
+                type: 'video/mp4'
+              }] // mobileStreams
+            }] // SetFlashLiveStream
+        }] // wNVideoCanvasProps
     }; // this.state
     
   } // constructor
@@ -130,8 +78,8 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 4 : {this.state.wNVideoCanvasProps[0].SetFlashLiveStream[0].strHeadline}</h1>
-	      <Video autoPlay={this.state.autoPlay} wNVideoCanvasProps={{this.state.wNVideoCanvasProps} />
+        <h1>Video Demo 5 : {this.state.wNVideoCanvasProps[0].SetFlashLiveStream[0].strHeadline}</h1>
+	      <Video autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.wNVideoCanvasProps} />
       </div>
     );
 	  
