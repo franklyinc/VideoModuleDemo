@@ -30,12 +30,14 @@ class VideoModuleDemo extends Component {
       }] // wNVideoCanvasProps
     }; // this.state
     
+    setTimeout(function(){ consle.log("*** test") }, 10000);
+
   } // constructor
   
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 11</h1>
+        <h1>Video Demo 12</h1>
 	      <Video clipId={this.state.id} autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.wNVideoCanvasProps} />
       </div>
     );
