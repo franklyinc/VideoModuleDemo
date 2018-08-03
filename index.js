@@ -34,13 +34,25 @@ class VideoModuleDemo extends Component {
       console.log("*** updating state");
       
       this.setState({
-        wNVideoCanvasProps: [{
+        wwNVideoCanvasProps: [{
           SetFlashLiveStream: [{
-            strHeadline: 'Test Video',
-            mobileStreams: [{
-              url: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
-            }] // mobileStreams
-          }] // SetFlashLiveStream
+              strUrl: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
+              strHeadline: 'Test Video',
+              strSummaryImageUrl: '',
+              mobileStreamCcUrl: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
+              hasPreroll: true,
+              strAdTag: 'Weather - Live Streaming',
+              mobileStreams: [{
+                url: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
+                type: 'video/mp4'
+              }, {
+                url: '',
+                type: 'video/mp4'
+              }, {
+                url: '',
+                type: 'video/mp4'
+              }] // mobileStreams
+            }] // SetFlashLiveStream
         }] // wNVideoCanvasProps
       }); // setState
 
@@ -51,7 +63,7 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 14</h1>
+        <h1>Video Demo 15</h1>
 	      <Video clipId={this.state.id} autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.wNVideoCanvasProps} />
       </div>
     );
