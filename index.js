@@ -5,36 +5,45 @@ class VideoModuleDemo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      
       id: 1,
       autoplay: true,
-      wNVideoCanvasProps: [{
-        SetFlashLiveStream: [{
-            strUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
-            strHeadline: 'Encoder 2 Test CBS Stream',
-            strSummaryImageUrl: '',
-            mobileStreamCcUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
-            hasPreroll: true,
-            strAdTag: 'Weather - Live Streaming',
-            mobileStreams: [{
-              url: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
-              type: 'video/mp4'
-            }, {
-              url: '',
-              type: 'video/mp4'
-            }, {
-              url: '',
-              type: 'video/mp4'
-            }] // mobileStreams
-          }] // SetFlashLiveStream
-      }], // wNVideoCanvasProps
-      video: <Video clipId={this.state.id} autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.wNVideoCanvasProps} />
+      video: ''
     }; // this.state
     
     this.updateVideo = this.updateVideo.bind(this);
 
   } // constructor
 
+  componentDidMount() {
+    const id = 1;
+    const autoPlay = true;
+    const wNVideoCanvasProps = [{
+        SetFlashLiveStream: [{
+          strUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+          strHeadline: headline,
+          strSummaryImageUrl: '',
+          mobileStreamCcUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+          hasPreroll: true,
+          strAdTag: 'Weather - Live Streaming',
+          mobileStreams: [{
+            url: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+            type: 'video/mp4'
+          }, {
+            url: '',
+            type: 'video/mp4'
+          }, {
+            url: '',
+            type: 'video/mp4'
+          }] // mobileStreams
+        }] // SetFlashLiveStream
+      }]; // wNVideoCanvasProps
+      this.setState({
+        id,
+        autoplay,
+        video: <Video clipId={id} autoPlay={autoPlay} wNVideoCanvasProps={wNVideoCanvasProps} />
+      });
+  }
+  
   updateVideo() {
     this.setState({
       id: 2,
@@ -66,7 +75,7 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 22 - {this.state.id}</h1> <button onClick={this.updateVideo}>Video2</button>
+        <h1>Video Demo 23 - {this.state.id}</h1> <button onClick={this.updateVideo}>Video2</button>
 	      {this.state.video}
       </div>
     );
