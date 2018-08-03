@@ -30,21 +30,20 @@ class VideoModuleDemo extends Component {
       }] // wNVideoCanvasProps
     }; // this.state
     
-    setTimeout(function(){ 
-      console.log("*** updating state");
-      
-      this.setState({
-        id: 2
-      }); // setState
-
-    }.bind(this), 10000);
+    this.updateVideo = this.updateVideo.bind(this);
 
   } // constructor
+
+  updateVideo() {
+    this.setState({
+      id: 2
+    });
+  }
   
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 17 - {this.state.id}</h1>
+        <h1>Video Demo 18 - {this.state.id}</h1>
 	      <Video clipId={this.state.id} autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.wNVideoCanvasProps} />
       </div>
     );
