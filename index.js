@@ -15,7 +15,7 @@ class VideoModuleDemo extends Component {
             strSummaryImageUrl: '',
             mobileStreamCcUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
             hasPreroll: true,
-            strAdTag 'Weather - Live Streaming': ,
+            strAdTag: 'Weather - Live Streaming',
             mobileStreams: [{
               url: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
               type: 'video/mp4'
