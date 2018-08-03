@@ -31,7 +31,19 @@ class VideoModuleDemo extends Component {
     }; // this.state
     
     setTimeout(function(){ 
-      console.log("*** test");
+      console.log("*** updating state");
+      
+      this.setState({
+        wNVideoCanvasProps: [{
+          SetFlashLiveStream: [{
+            strHeadline: 'Test Video',
+            mobileStreams: [{
+              url: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
+            }] // mobileStreams
+          }] // SetFlashLiveStream
+        }] // wNVideoCanvasProps
+      }); // setState
+
     }, 10000);
 
   } // constructor
@@ -39,7 +51,7 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 13</h1>
+        <h1>Video Demo 14</h1>
 	      <Video clipId={this.state.id} autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.wNVideoCanvasProps} />
       </div>
     );
