@@ -10,7 +10,7 @@ class VideoModuleDemo extends Component {
       video: ''
     }; // this.state
     
-    // this.updateVideo = this.updateVideo.bind(this);
+    this.updateVideo = this.updateVideo.bind(this);
 
   } // constructor
 
@@ -19,7 +19,7 @@ class VideoModuleDemo extends Component {
     const wNVideoCanvasProps = [{
       SetFlashLiveStream: [{
         strUrl: url,
-        strHeadline: 'Bike Video',
+        strHeadline: 'Bike Video (1)',
         strSummaryImageUrl: '',
         mobileStreamCcUrl: url,
         hasPreroll: true,
@@ -42,38 +42,42 @@ class VideoModuleDemo extends Component {
     });
   }
   
-  // updateVideo() {
-  //   this.setState({
-  //     id: 2,
-  // 
-  //     wNVideoCanvasProps: [{
-  //       SetFlashLiveStream: [{
-  //           strUrl: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
-  //           strHeadline: 'Video Test 2',
-  //           strSummaryImageUrl: '',
-  //           mobileStreamCcUrl: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
-  //           hasPreroll: true,
-  //           strAdTag: 'Weather - Live Streaming',
-  //           mobileStreams: [{
-  //             url: 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
-  //             type: 'video/mp4'
-  //           }, {
-  //             url: '',
-  //             type: 'video/mp4'
-  //           }, {
-  //             url: '',
-  //             type: 'video/mp4'
-  //           }] // mobileStreams
-  //         }] // SetFlashLiveStream
-  //     }] // wNVideoCanvasProps
-  // 
-  //   });
-  // }
+  async updateVideo() {
+    
+    const url = 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8';
+    const wNVideoCanvasProps = [{
+      SetFlashLiveStream: [{
+        strUrl: url,
+        strHeadline: 'Test Video (2)',
+        strSummaryImageUrl: '',
+        mobileStreamCcUrl: url,
+        hasPreroll: true,
+        strAdTag: 'Weather - Live Streaming',
+        mobileStreams: [{
+          url,
+          type: 'video/mp4'
+        }, {
+          url: '',
+          type: 'video/mp4'
+        }, {
+          url: '',
+          type: 'video/mp4'
+        }]
+      }]
+    }];
+    
+    await this.setState({ video: '' }); // clear the current video before setting a new one.
+
+    this.setState({
+      video: <Video clipId={2} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />  
+    });
+  }
   
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 25 - {this.state.id}</h1> 
+        <h1>Video Demo 26 - {this.state.id}</h1> 
+        <button onClick={this.updateVideo}>Video2</button>
 	      {this.state.video}
       </div>
     );
