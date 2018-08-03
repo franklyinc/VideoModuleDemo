@@ -41,7 +41,6 @@ class VideoModuleDemo extends Component {
   }
   
    updateVideo() {
-    
     const url = 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8';
     const wNVideoCanvasProps = [{
       SetFlashLiveStream: [{
@@ -74,7 +73,7 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 27</h1> 
+        <h1>Video Demo 28</h1> 
         <button onClick={this.updateVideo}>Video2</button>
 	      {this.state.video}
       </div>
