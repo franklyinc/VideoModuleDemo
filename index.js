@@ -27,7 +27,8 @@ class VideoModuleDemo extends Component {
               type: 'video/mp4'
             }] // mobileStreams
           }] // SetFlashLiveStream
-      }] // wNVideoCanvasProps
+      }], // wNVideoCanvasProps
+      video: <Video clipId={this.state.id} autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.wNVideoCanvasProps} />
     }; // this.state
     
     this.updateVideo = this.updateVideo.bind(this);
@@ -65,8 +66,8 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 21 - {this.state.id}</h1> <button onClick={this.updateVideo}>Video2</button>
-	      <Video clipId={this.state.id} autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.wNVideoCanvasProps} />
+        <h1>Video Demo 22 - {this.state.id}</h1> <button onClick={this.updateVideo}>Video2</button>
+	      {this.state.video}
       </div>
     );
 	  
