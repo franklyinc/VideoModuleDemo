@@ -60,7 +60,7 @@ class VideoModuleDemo extends Component {
     return (
       <div className='VideoModuleDemo'>	
         <h1>Video Demo</h1>
-	      <Video autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.wNVideoCanvasProps1} />
+	      <Video autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.currentVideo} />
       </div>
     );
 	  
