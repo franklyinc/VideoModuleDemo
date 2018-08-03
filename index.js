@@ -43,7 +43,7 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 18 - {this.state.id}</h1>
+        <h1>Video Demo 19 - {this.state.id}</h1> <button onClick={this.updateVideo}>Video2</button>
 	      <Video clipId={this.state.id} autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.wNVideoCanvasProps} />
       </div>
     );
