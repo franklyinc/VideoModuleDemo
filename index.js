@@ -5,16 +5,14 @@ class VideoModuleDemo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: 1,
-      autoplay: true,
       video: ''
-    }; // this.state
+    };
     
     this.updateVideo = this.updateVideo.bind(this);
 
-  } // constructor
+  }
 
-  componentDidMount() {
+  componentDidMount() { // set initial video
     const url = 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8';
     const wNVideoCanvasProps = [{
       SetFlashLiveStream: [{
@@ -42,7 +40,7 @@ class VideoModuleDemo extends Component {
     });
   }
   
-  async updateVideo() {
+   updateVideo() {
     
     const url = 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8';
     const wNVideoCanvasProps = [{
@@ -66,7 +64,7 @@ class VideoModuleDemo extends Component {
       }]
     }];
     
-    await this.setState({ video: '' }); // clear the current video before setting a new one.
+    // await this.setState({ video: '' }); // clear the current video before setting a new one.
 
     this.setState({
       video: <Video clipId={2} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />  
@@ -76,7 +74,7 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 26 - {this.state.id}</h1> 
+        <h1>Video Demo 27</h1> 
         <button onClick={this.updateVideo}>Video2</button>
 	      {this.state.video}
       </div>
