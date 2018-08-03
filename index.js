@@ -51,6 +51,29 @@ class VideoModuleDemo extends Component {
     this.state = {
       id: 1,
       autoplay: true,
+      wNVideoCanvasProps:
+        
+        [{
+            SetFlashLiveStream: [{
+                strUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+                strHeadline: 'Encoder 2 Test CBS Stream',
+                strSummaryImageUrl: '',
+                mobileStreamCcUrl: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+                hasPreroll: true,
+                strAdTag: 'Weather - Live Streaming',
+                mobileStreams: [{
+                  url: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+                  type: 'video/mp4'
+                }, {
+                  url: '',
+                  type: 'video/mp4'
+                }, {
+                  url: '',
+                  type: 'video/mp4'
+                }] // mobileStreams
+              }] // SetFlashLiveStream
+          }]
+      ,
       wNVideoCanvasPropsArray: [
         
         [{
@@ -107,8 +130,8 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 3 : {this.state.wNVideoCanvasPropsArray[this.state.currentVideo][0].SetFlashLiveStream[0].strHeadline}</h1>
-	      <Video autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.wNVideoCanvasPropsArray[this.state.currentVideo][0]} />
+        <h1>Video Demo 4 : {this.state.wNVideoCanvasProps[0].SetFlashLiveStream[0].strHeadline}</h1>
+	      <Video autoPlay={this.state.autoPlay} wNVideoCanvasProps={{this.state.wNVideoCanvasProps} />
       </div>
     );
 	  
