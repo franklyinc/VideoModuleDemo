@@ -59,7 +59,7 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo</h1>
+        <h1>Video Demo : {this.state.currentVideo.strHeadline}</h1>
 	      <Video autoPlay={this.state.autoPlay} wNVideoCanvasProps={this.state.currentVideo} />
       </div>
     );
