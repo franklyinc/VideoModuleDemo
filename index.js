@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Video from 'components/media/Video';
-import axios = from 'axios';
+import axios from 'axios';
 
 class VideoModuleDemo extends Component {
   constructor(props) {
