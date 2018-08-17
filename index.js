@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import Video from 'components/media/Video';
 
 class VideoModuleDemo extends Component {
 
@@ -6,7 +7,7 @@ class VideoModuleDemo extends Component {
 
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 7 </h1>
+        <h1>Video Demo 8</h1>
       </div>
     );	 
 	  
