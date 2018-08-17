@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import Video from 'components/media/Video';
 
 class VideoModuleDemo extends Component {
 
