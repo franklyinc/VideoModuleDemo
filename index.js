@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Video from 'components/media/Video';
-import AdvertisementUnit from 'components/AdvertisementUnit';
+// import AdvertisementUnit from 'components/AdvertisementUnit';
 
 // import axios from 'axios';
 
@@ -91,7 +91,6 @@ class VideoModuleDemo extends Component {
         <button onClick={this.updateVideo}>Video2</button>
 	      {this.state.video}
 	    
-	<AdvertisementUnit  />;
       </div>
     );
 	  
