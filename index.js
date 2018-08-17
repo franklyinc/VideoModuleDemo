@@ -6,7 +6,7 @@ class VideoModuleDemo extends Component {
 
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 7</h1>
+        <h1>Video Demo 7 </h1>
       </div>
     );	 
 	  
