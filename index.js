@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import Video from 'components/media/Video';
-import axios from 'axios';
+import AdvertisementUnit from 'components/AdvertisementUnit';
+
+// import axios from 'axios';
 
 class VideoModuleDemo extends Component {
   constructor(props) {
@@ -39,15 +41,15 @@ class VideoModuleDemo extends Component {
       video: <Video clipId={1} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />
     });
 	  
-  axios.get('https://s3.amazonaws.com/frankly-news-web/test/playlist.json')
-  .then(function (response) {
-    // handle success
-    console.log(response);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  });
+//   axios.get('https://s3.amazonaws.com/frankly-news-web/test/playlist.json')
+//   .then(function (response) {
+//     // handle success
+//     console.log(response);
+//   })
+//   .catch(function (error) {
+//     // handle error
+//     console.log(error);
+//   });
 
   }
   
@@ -85,9 +87,11 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 2</h1> 
+        <h1>Video Demo 3</h1> 
         <button onClick={this.updateVideo}>Video2</button>
 	      {this.state.video}
+	    
+	<AdvertisementUnit  />;
       </div>
     );
 	  
