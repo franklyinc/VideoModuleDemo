@@ -19,10 +19,13 @@
   
 }
 
-.VideoModuleDemo-Thumb, .VideoModuleDemo-Thumb a {
+.VideoModuleDemo-Thumb {
   text-align: center;
-  color: #ffffff;
   font-weight: bold;
   font-size: 3em;
+}
+
+.VideoModuleDemo-Thumb a {
+  color: #ffffff;
   text-decoration: none;
 }
