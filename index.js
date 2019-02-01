@@ -137,7 +137,6 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 7</h1> 
 	<table className='VideoModuleDemo-Table'>
 	  <tr>
 	    <td className='VideoModuleDemo-col1' rowspan='3'>  
