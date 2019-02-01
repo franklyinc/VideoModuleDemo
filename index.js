@@ -8,7 +8,8 @@ class VideoModuleDemo extends Component {
       video: ''
     };
     
-    this.updateVideo = this.updateVideo.bind(this);
+    this.updateVideo2 = this.updateVideo2.bind(this);
+    this.updateVideo3 = this.updateVideo3.bind(this);
 
   }
 
@@ -97,7 +98,7 @@ class VideoModuleDemo extends Component {
 
     // clipId is required if you are not using FRN_rawResponses
     this.setState({
-      video: <Video clipId={2} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />  
+      video: <Video clipId={3} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />  
     });
   }	
   
