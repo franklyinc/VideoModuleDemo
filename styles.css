@@ -15,5 +15,7 @@
 .VideoModuleDemo-Thumb {
   background-color: green;
   width: 100%;
+  height: 33%;
+  margin: 25px;
   background-image: url("https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg");
 }
