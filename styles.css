@@ -18,6 +18,8 @@
   font-weight: bold;
   font-size: 3em;
   margin-left: 16px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .VideoModuleDemo-Thumb1 {
@@ -40,9 +42,4 @@
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   border-top: 16px solid #fff;
-}
-
-.VideoModuleDemo-Thumb a {
-  color: #ffffff;
-  text-decoration: none;
 }
