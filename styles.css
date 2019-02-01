@@ -11,13 +11,19 @@
   background-color: yellow;
   width: 25%;
   height:100%;
-}
-
-.VideoModuleDemo-Thumb {
-  background-color: green;
-  margin: 25px 0px;
+  
   background-image: url("https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  
+}
+
+.VideoModuleDemo-Thumb {
+  background-color: green;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+
 }
