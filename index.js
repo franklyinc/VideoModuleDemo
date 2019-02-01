@@ -8,6 +8,7 @@ class VideoModuleDemo extends Component {
       video: ''
     };
     
+    this.updateVideo1 = this.updateVideo1.bind(this);
     this.updateVideo2 = this.updateVideo2.bind(this);
     this.updateVideo3 = this.updateVideo3.bind(this);
 
@@ -40,6 +41,37 @@ class VideoModuleDemo extends Component {
     });
   }
   
+  async updateVideo1() {
+    
+    const url = 'https://channels-1.video.franklyinc.com/out/i/10755.m3u8';
+    const wNVideoCanvasProps = [{
+      SetFlashLiveStream: [{
+        strUrl: url,
+        strHeadline: 'Livestream 1',
+        strAdTag: 'News',
+        hasPreroll: true,
+        strSummaryImageUrl: '',
+        mobileStreams: [{
+          url,
+          type: 'video/mp4'
+        }, {
+          url: '',
+          type: 'video/mp4'
+        }, {
+          url: '',
+          type: 'video/mp4'
+        }]
+      }]
+    }];
+    
+    await this.setState({ video: '' }); // clear the current video before setting a new one.
+
+    // clipId is required if you are not using FRN_rawResponses
+    this.setState({
+      video: <Video clipId={1} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />  
+    });
+  }
+	
   async updateVideo2() {
     
     const url = 'https://channels-1.video.franklyinc.com/out/i/6989.m3u8';
@@ -105,10 +137,13 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 6</h1> 
-        <button onClick={this.updateVideo2}>Video2</button>
-        <button onClick={this.updateVideo3}>Video3</button>
-	      {this.state.video}
+        <h1>Video Demo 7</h1> 
+	<div className='VideoModuleDemo-Video'>{this.state.video}</div>
+        <ul>
+	    <li className='VideoModuleDemo-Thumb'><a onClick={this.updateVideo1}>Video 1</a></li>
+            <li className='VideoModuleDemo-Thumb'><a onClick={this.updateVideo2}>Video 2</a></li>
+            <li className='VideoModuleDemo-Thumb'><a onClick={this.updateVideo3}>Video 3</a></li>
+	</ul>
       </div>
     );
 	  
