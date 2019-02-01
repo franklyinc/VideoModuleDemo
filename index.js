@@ -148,12 +148,12 @@ class VideoModuleDemo extends Component {
 	  </tr>
 	  <tr>  
 	    <td className='VideoModuleDemo-col2'>
-                <div className='VideoModuleDemo-Thumb VideoModuleDemo-Thumb2'><br/><a onClick={this.updateVideo2}>Video 2</a></div>
+                <div className='VideoModuleDemo-Thumb VideoModuleDemo-Thumb2'><a onClick={this.updateVideo2}>Video 2</a></div>
 	    </td>
 	  </tr>
 	  <tr>
 	    <td className='VideoModuleDemo-col2'>
-            	<div className='VideoModuleDemo-Thumb VideoModuleDemo-Thumb3'><br/><a onClick={this.updateVideo3}>Video 3</a></div>
+            	<div className='VideoModuleDemo-Thumb VideoModuleDemo-Thumb3'><a onClick={this.updateVideo3}>Video 3</a></div>
 	    </td>
 	  </tr>
         </table>
