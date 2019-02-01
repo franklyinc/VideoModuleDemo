@@ -138,12 +138,18 @@ class VideoModuleDemo extends Component {
     return (
       <div className='VideoModuleDemo'>	
         <h1>Video Demo 7</h1> 
-	<div className='VideoModuleDemo-Video'>{this.state.video}</div>
-        <ul>
-	    <li className='VideoModuleDemo-Thumb'><a onClick={this.updateVideo1}>Video 1</a></li>
-            <li className='VideoModuleDemo-Thumb'><a onClick={this.updateVideo2}>Video 2</a></li>
-            <li className='VideoModuleDemo-Thumb'><a onClick={this.updateVideo3}>Video 3</a></li>
-	</ul>
+	<table>
+	  <tr>
+	    <td>  
+	      <span className='VideoModuleDemo-Video'>{this.state.video}</span>
+	    </td>
+	    <td>
+		<span className='VideoModuleDemo-Thumb'><a onClick={this.updateVideo1}>Video 1</a></span>
+                <span className='VideoModuleDemo-Thumb'><a onClick={this.updateVideo2}>Video 2</a></span>
+            	<span className='VideoModuleDemo-Thumb'><a onClick={this.updateVideo3}>Video 3</a></span>
+	    </td>
+	  </tr>
+        </table>
       </div>
     );
 	  
