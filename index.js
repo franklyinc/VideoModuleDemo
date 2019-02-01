@@ -138,7 +138,7 @@ class VideoModuleDemo extends Component {
     return (
       <div className='VideoModuleDemo'>	
         <h1>Video Demo 7</h1> 
-	<table>
+	<table className='VideoModuleDemo-Table'>
 	  <tr>
 	    <td>  
 	      <span className='VideoModuleDemo-Video'>{this.state.video}</span>
