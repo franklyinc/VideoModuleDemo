@@ -21,8 +21,8 @@
 }
 
 .VideoModuleDemo-Thumb1 {
-  background-image: url("https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg");
-  background-image: url("https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg"), linear-gradient(#eb01a5, #d13531); /* W3C */
+  xbackground-image: url("https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg");
+  background-image: linear-gradient(#eb01a5, #d13531), url("https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg"); /* W3C */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
