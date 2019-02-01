@@ -13,13 +13,13 @@ class VideoModuleDemo extends Component {
   }
 
   componentDidMount() { // set initial video
-    const url = 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8';
+    const url = 'https://channels-1.video.franklyinc.com/out/i/10755.m3u8';
     const wNVideoCanvasProps = [{
       SetFlashLiveStream: [{
         strUrl: url,
-        strHeadline: 'Bike Video (1)',
-        strAdTag: 'Weather - Live Streaming',
-        hasPreroll: true,
+        strHeadline: 'Livestream 1',
+        strAdTag: 'News',
+        hasPreroll: false,
         strSummaryImageUrl: '',
         mobileStreams: [{
           url,
@@ -73,7 +73,7 @@ class VideoModuleDemo extends Component {
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 4</h1> 
+        <h1>Video Demo 5</h1> 
         <button onClick={this.updateVideo}>Video2</button>
 	      {this.state.video}
       </div>
