@@ -39,14 +39,14 @@ class VideoModuleDemo extends Component {
     });
   }
   
-  async updateVideo() {
+  async updateVideo2() {
     
-    const url = 'http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8';
+    const url = 'https://channels-1.video.franklyinc.com/out/i/6989.m3u8';
     const wNVideoCanvasProps = [{
       SetFlashLiveStream: [{
         strUrl: url,
-        strHeadline: 'Test Video (2)',
-        strAdTag: 'Weather - Live Streaming',
+        strHeadline: 'Livestream 2',
+        strAdTag: 'News',
         hasPreroll: true,
         strSummaryImageUrl: '',
         mobileStreams: [{
@@ -69,12 +69,44 @@ class VideoModuleDemo extends Component {
       video: <Video clipId={2} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />  
     });
   }
+	
+  async updateVideo3() {
+    
+    const url = 'https://channels-1.video.franklyinc.com/out/i/4926.m3u8';
+    const wNVideoCanvasProps = [{
+      SetFlashLiveStream: [{
+        strUrl: url,
+        strHeadline: 'Livestream 3',
+        strAdTag: 'News',
+        hasPreroll: true,
+        strSummaryImageUrl: '',
+        mobileStreams: [{
+          url,
+          type: 'video/mp4'
+        }, {
+          url: '',
+          type: 'video/mp4'
+        }, {
+          url: '',
+          type: 'video/mp4'
+        }]
+      }]
+    }];
+    
+    await this.setState({ video: '' }); // clear the current video before setting a new one.
+
+    // clipId is required if you are not using FRN_rawResponses
+    this.setState({
+      video: <Video clipId={2} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />  
+    });
+  }	
   
   render(){
     return (
       <div className='VideoModuleDemo'>	
-        <h1>Video Demo 5</h1> 
-        <button onClick={this.updateVideo}>Video2</button>
+        <h1>Video Demo 6</h1> 
+        <button onClick={this.updateVideo2}>Video2</button>
+        <button onClick={this.updateVideo3}>Video3</button>
 	      {this.state.video}
       </div>
     );
