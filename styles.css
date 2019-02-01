@@ -26,22 +26,20 @@
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  border-bottom: 6px solid #fff;
+  border-bottom: 16px solid #fff;
 }
 .VideoModuleDemo-Thumb2 {
   background-image: url("https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
 }
 .VideoModuleDemo-Thumb3 {
   background-image: url("https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  border-top: 6px solid #fff;
+  border-top: 16px solid #fff;
 }
 
 .VideoModuleDemo-Thumb a {
