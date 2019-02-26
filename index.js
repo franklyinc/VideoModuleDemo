@@ -15,6 +15,7 @@ class VideoModuleDemo extends Component {
   }
 
   componentDidMount() { // set initial video
+    // const url = 'https://channels-1.video.franklyinc.com/out/i/10755.m3u8';
     const url = 'https://channels-1.video.franklyinc.com/out/i/13265.m3u8';
     const wNVideoCanvasProps = [{
       SetFlashLiveStream: [{
