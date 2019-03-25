@@ -1,3 +1,33 @@
+.container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "main vid1"
+  "main vid2"
+  "main vid3";
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.container > div {
+  border: 1px dashed #888;
+}
+
+.main {
+  grid-area: main;
+}
+.vid1 {
+  grid-area: vid1;
+}
+.vid2 {
+  grid-area: vid2;
+}
+.vid3 {
+  grid-area: vid3;
+}
+
+
+
+
 .VideoModuleDemo-Table {
   width: 100%;
   height: 100%;
