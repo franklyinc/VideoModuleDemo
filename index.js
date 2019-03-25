@@ -45,8 +45,10 @@ class VideoModuleDemo extends Component {
   }
 	
   async clearVideo() {
-    videojs(FranklyVideoPlayerList[0].playerInfo.playerId).dispose();
-    await this.setState({ video: '' }); // clear the current video
+    if (FranklyVideoPlayerList && FranklyVideoPlayerList[0] && FranklyVideoPlayerList[0].playerInfo && FranklyVideoPlayerList[0].playerInfo.playerId) {
+      videojs(FranklyVideoPlayerList[0].playerInfo.playerId).dispose();
+      await this.setState({ video: '' }); // clear the current video
+    }
   }
 
   async updateVideo1() {
@@ -73,8 +75,7 @@ class VideoModuleDemo extends Component {
       }]
     }];
     
-    videojs(FranklyVideoPlayerList[0].playerInfo.playerId).dispose();
-    await this.setState({ video: '' }); // clear the current video before setting a new one.
+    this.clearVideo();
 
     // clipId is required if you are not using FRN_rawResponses
     this.setState({
@@ -106,8 +107,7 @@ class VideoModuleDemo extends Component {
       }]
     }];
     
-    videojs(FranklyVideoPlayerList[0].playerInfo.playerId).dispose();
-    await this.setState({ video: '' }); // clear the current video before setting a new one.
+    this.clearVideo();
 
     // clipId is required if you are not using FRN_rawResponses
     this.setState({
@@ -140,8 +140,7 @@ class VideoModuleDemo extends Component {
       }]
     }];
     
-    videojs(FranklyVideoPlayerList[0].playerInfo.playerId).dispose();
-    await this.setState({ video: '' }); // clear the current video before setting a new one.
+    this.clearVideo();
 
     // clipId is required if you are not using FRN_rawResponses
     this.setState({
