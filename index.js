@@ -45,7 +45,8 @@ class VideoModuleDemo extends Component {
   
   async updateVideo1() {
     
-    const url = 'https://channels-1.video.franklyinc.com/out/i/10755.m3u8';
+//     const url = 'https://channels-1.video.franklyinc.com/out/i/10755.m3u8';
+    url = 'https://channels-1.video.franklyinc.com/out/i/15813.m3u8';
     const wNVideoCanvasProps = [{
       SetFlashLiveStream: [{
         strUrl: url,
@@ -80,8 +81,7 @@ class VideoModuleDemo extends Component {
 	
   async updateVideo2() {
     
-    //const url = 'https://channels-1.video.franklyinc.com/out/i/6989.m3u8';
-    const url = 'https://1cfed095bf82411d8d4a38bed11fa674.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA/83.m3u8';
+    const url = 'https://channels-1.video.franklyinc.com/out/i/6989.m3u8';
     const wNVideoCanvasProps = [{
       SetFlashLiveStream: [{
         strUrl: url,
@@ -112,7 +112,8 @@ class VideoModuleDemo extends Component {
 	
   async updateVideo3() {
     
-    const url = 'https://channels-1.video.franklyinc.com/out/i/4926.m3u8';
+//     const url = 'https://channels-1.video.franklyinc.com/out/i/4926.m3u8';
+    const url = 'https://1cfed095bf82411d8d4a38bed11fa674.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA/83.m3u8';
     const wNVideoCanvasProps = [{
       SetFlashLiveStream: [{
         strUrl: url,
