@@ -41,7 +41,7 @@ class VideoModuleDemo extends Component {
 //     this.setState({
 //       video: <Video clipId={1} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />
 //     });
-    this.updateVideo1();
+//     this.updateVideo1();
   }
 	
   async clearVideo() {
