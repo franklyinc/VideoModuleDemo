@@ -62,8 +62,9 @@ class VideoModuleDemo extends Component {
     console.log("*** updateVideo(), url:", url);
     if (FranklyVideoPlayerList && FranklyVideoPlayerList[0] && FranklyVideoPlayerList[0].playerInfo && FranklyVideoPlayerList[0].playerInfo.playerId) {
       videojs(FranklyVideoPlayerList[0].playerInfo.playerId).src(url);
-      FranklyVideoPlayerList[0].playerInfo.canFireResumeAfterPause = false;
-      FranklyVideoPlayerList[0].playerInfo.loadInitialVideo(true);
+      videojs(FranklyVideoPlayerList[0].playerInfo.playerId).play(); // this is a hack. no update to analytics/etc.
+//       FranklyVideoPlayerList[0].playerInfo.canFireResumeAfterPause = false;
+//       FranklyVideoPlayerList[0].playerInfo.loadInitialVideo(true);
     }
   }
 
