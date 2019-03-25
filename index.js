@@ -46,10 +46,10 @@ class VideoModuleDemo extends Component {
 	
   async clearVideo() {
     if (FranklyVideoPlayerList && FranklyVideoPlayerList[0] && FranklyVideoPlayerList[0].playerInfo && FranklyVideoPlayerList[0].playerInfo.playerId) {
-	videojs(FranklyVideoPlayerList[0].playerInfo.playerId).dispose();
-        FranklyVideoPlayerList[0].enabled = false;
-        FranklyVideoPlayerList.splice(0,1);
-	await this.setState({ video: '' }); // clear the current video
+// 	videojs(FranklyVideoPlayerList[0].playerInfo.playerId).dispose();
+//         FranklyVideoPlayerList[0].enabled = false;
+//         FranklyVideoPlayerList.splice(0,1);
+// 	await this.setState({ video: '' }); // clear the current video
     }
   }
 
