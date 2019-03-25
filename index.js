@@ -55,34 +55,39 @@ class VideoModuleDemo extends Component {
 
   async updateVideo1() {
     console.log("*** updateVideo1()");
-//     const url = 'https://channels-1.video.franklyinc.com/out/i/10755.m3u8';
-    url = 'https://channels-1.video.franklyinc.com/out/i/15813.m3u8';
-    const wNVideoCanvasProps = [{
-      SetFlashLiveStream: [{
-        strUrl: url,
-        strHeadline: 'Livestream 1',
-        strAdTag: 'News',
-        hasPreroll: true,
-        strSummaryImageUrl: '',
-        mobileStreams: [{
-          url,
-          type: 'video/mp4'
-        }, {
-          url: '',
-          type: 'video/mp4'
-        }, {
-          url: '',
-          type: 'video/mp4'
-        }]
-      }]
-    }];
+// //     const url = 'https://channels-1.video.franklyinc.com/out/i/10755.m3u8';
+//     url = 'https://channels-1.video.franklyinc.com/out/i/15813.m3u8';
+//     const wNVideoCanvasProps = [{
+//       SetFlashLiveStream: [{
+//         strUrl: url,
+//         strHeadline: 'Livestream 1',
+//         strAdTag: 'News',
+//         hasPreroll: true,
+//         strSummaryImageUrl: '',
+//         mobileStreams: [{
+//           url,
+//           type: 'video/mp4'
+//         }, {
+//           url: '',
+//           type: 'video/mp4'
+//         }, {
+//           url: '',
+//           type: 'video/mp4'
+//         }]
+//       }]
+//     }];
     
-    this.clearVideo();
+//     this.clearVideo();
 
-    // clipId is required if you are not using FRN_rawResponses
-    this.setState({
-      video: <Video clipId={1} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />  
-    });
+//     // clipId is required if you are not using FRN_rawResponses
+//     this.setState({
+//       video: <Video clipId={1} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />  
+//     });
+    if (FranklyVideoPlayerList && FranklyVideoPlayerList[0] && FranklyVideoPlayerList[0].playerInfo && FranklyVideoPlayerList[0].playerInfo.playerId) {
+      videojs(FranklyVideoPlayerList[0].playerInfo.playerId).src('https://channels-1.video.franklyinc.com/out/i/15813.m3u8');
+      FranklyVideoPlayerList[0].playerInfo.canFireResumeAfterPause = false;
+      FranklyVideoPlayerList[0].playerInfo.loadInitialVideo(true);
+    }
   }
 	
   async updateVideo2() {
