@@ -117,30 +117,6 @@ class VideoModuleDemo extends Component {
 	      </div>
 	   </div>
 	</div>	    
-	    
-	    
-  <div className='VideoModuleDemo'>	
-    <table className='VideoModuleDemo-Table'>
-      <tr>
-        <td className='VideoModuleDemo-col1' rowspan='3'>  col1
-        </td>
-        <td className='VideoModuleDemo-col2'>  col2 1
-
-        </td>
-      </tr>
-      <tr>  
-        <td className='VideoModuleDemo-col2'>
-              col2 2
-        </td>
-      </tr>
-      <tr>
-        <td className='VideoModuleDemo-col2'>
-              col2 3
-        </td>
-      </tr>
-    </table>
-    <div className='' onClick={this.clearVideo}>&nbsp;&nbsp;&nbsp;</div>
-    </div>
 </div>
     );
 	  
