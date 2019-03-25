@@ -13,20 +13,20 @@ class VideoModuleDemo extends Component {
     this.updateVideo3 = this.updateVideo3.bind(this);
     this.updateVideo = this.updateVideo.bind(this);
     this.clearVideo = this.clearVideo.bind(this);
+    
     this.videoPlaylist = [
       'https://channels-1.video.franklyinc.com/out/i/15813.m3u8',
-	    'https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8',
-	    'https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8'
+      'https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8',
+      'https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8'
     ]
 
   }
   shouldComponentUpdate() { 
-        console.log("*** shouldComponentUpdate()");
+    console.log("*** shouldComponentUpdate()");
   	return false;
   }
   componentWillMount() { // set initial video
-        console.log("*** componentWillMount()");
-    //const url = 'https://channels-1.video.franklyinc.com/out/i/13265.m3u8';
+    console.log("*** componentWillMount()");
     const url = this.videoPlaylist[0];
     const wNVideoCanvasProps = [{
       SetFlashLiveStream: [{
@@ -51,7 +51,6 @@ class VideoModuleDemo extends Component {
     this.setState({
       video: <Video clipId={1} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />
     });
-//     this.updateVideo1();
   }
 	
   async clearVideo() {
@@ -63,6 +62,7 @@ class VideoModuleDemo extends Component {
 	await this.setState({ video: '' }); // clear the current video
     }
   }
+  
   async updateVideo(url) {
     console.log("*** updateVideo(), url:", url);
     if (FranklyVideoPlayerList && FranklyVideoPlayerList[0] && FranklyVideoPlayerList[0].playerInfo && FranklyVideoPlayerList[0].playerInfo.playerId) {
@@ -75,68 +75,11 @@ class VideoModuleDemo extends Component {
 
   async updateVideo1() {
     console.log("*** updateVideo1()");
-// //     const url = 'https://channels-1.video.franklyinc.com/out/i/10755.m3u8';
-//     url = 'https://channels-1.video.franklyinc.com/out/i/15813.m3u8';
-//     const wNVideoCanvasProps = [{
-//       SetFlashLiveStream: [{
-//         strUrl: url,
-//         strHeadline: 'Livestream 1',
-//         strAdTag: 'News',
-//         hasPreroll: true,
-//         strSummaryImageUrl: '',
-//         mobileStreams: [{
-//           url,
-//           type: 'video/mp4'
-//         }, {
-//           url: '',
-//           type: 'video/mp4'
-//         }, {
-//           url: '',
-//           type: 'video/mp4'
-//         }]
-//       }]
-//     }];
-    
-//     this.clearVideo();
-
-//     // clipId is required if you are not using FRN_rawResponses
-//     this.setState({
-//       video: <Video clipId={1} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />  
-//     });
-//     this.updateVideo('https://channels-1.video.franklyinc.com/out/i/15813.m3u8');
     this.updateVideo(this.videoPlaylist[0]);
   }
 	
   async updateVideo2() {
     console.log("*** updateVideo2()");
-    
-//     const url = 'https://channels-1.video.franklyinc.com/out/i/6989.m3u8';
-//     const wNVideoCanvasProps = [{
-//       SetFlashLiveStream: [{
-//         strUrl: url,
-//         strHeadline: 'Livestream 2',
-//         strAdTag: 'News',
-//         hasPreroll: true,
-//         strSummaryImageUrl: '',
-//         mobileStreams: [{
-//           url,
-//           type: 'video/mp4'
-//         }, {
-//           url: '',
-//           type: 'video/mp4'
-//         }, {
-//           url: '',
-//           type: 'video/mp4'
-//         }]
-//       }]
-//     }];
-    
-//     this.clearVideo();
-
-//     // clipId is required if you are not using FRN_rawResponses
-//     this.setState({
-//       video: <Video clipId={2} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />  
-//     });
 // 	  this.updateVideo('https://channels-1.video.franklyinc.com/out/i/6989.m3u8');
         this.updateVideo(this.videoPlaylist[1]);
 
@@ -144,35 +87,6 @@ class VideoModuleDemo extends Component {
 	
   async updateVideo3() {
         console.log("*** updateVideo3()");
-
-// //     const url = 'https://channels-1.video.franklyinc.com/out/i/4926.m3u8';
-//     const url = 'https://1cfed095bf82411d8d4a38bed11fa674.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA/83.m3u8';
-//     const wNVideoCanvasProps = [{
-//       SetFlashLiveStream: [{
-//         strUrl: url,
-//         strHeadline: 'Livestream 3',
-//         strAdTag: 'News',
-//         hasPreroll: true,
-//         strSummaryImageUrl: '',
-//         mobileStreams: [{
-//           url,
-//           type: 'video/mp4'
-//         }, {
-//           url: '',
-//           type: 'video/mp4'
-//         }, {
-//           url: '',
-//           type: 'video/mp4'
-//         }]
-//       }]
-//     }];
-    
-//     this.clearVideo();
-
-//     // clipId is required if you are not using FRN_rawResponses
-//     this.setState({
-//       video: <Video clipId={3} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />  
-//     });
 // 	  this.updateVideo('https://1cfed095bf82411d8d4a38bed11fa674.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA/83.m3u8');
         this.updateVideo(this.videoPlaylist[2]);
 
