@@ -15,8 +15,12 @@ class VideoModuleDemo extends Component {
     this.clearVideo = this.clearVideo.bind(this);
 
   }
-
+  shouldComponentUpdate() { 
+        console.log("*** shouldComponentUpdate()");
+  	return false;
+  }
   componentDidMount() { // set initial video
+        console.log("*** componentDidMount()");
     //const url = 'https://channels-1.video.franklyinc.com/out/i/13265.m3u8';
     const url = 'https://channels-1.video.franklyinc.com/out/i/15813.m3u8';
     const wNVideoCanvasProps = [{
