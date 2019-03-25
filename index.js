@@ -8,12 +8,12 @@ class VideoModuleDemo extends Component {
       video: ''
     };
     
-    this.updateVideo1 = this.updateVideo1.bind(this);
-    this.updateVideo2 = this.updateVideo2.bind(this);
-    this.updateVideo3 = this.updateVideo3.bind(this);
     this.updateVideo = this.updateVideo.bind(this);
     this.clearVideo = this.clearVideo.bind(this);
     
+    // 	  this.updateVideo('https://channels-1.video.franklyinc.com/out/i/6989.m3u8');
+    // 	  this.updateVideo('https://1cfed095bf82411d8d4a38bed11fa674.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA/83.m3u8');
+
     this.videoPlaylist = [
       'https://channels-1.video.franklyinc.com/out/i/15813.m3u8',
       'https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8',
@@ -64,7 +64,7 @@ class VideoModuleDemo extends Component {
   }
   
   async updateVideo(id) {
-    console.log("*** updateVideo(), id:", id);
+    console.log("*** updateVideo(), id:", id + " url: " + this.videoPlaylist[id]);
     if (FranklyVideoPlayerList && FranklyVideoPlayerList[0] && FranklyVideoPlayerList[0].playerInfo && FranklyVideoPlayerList[0].playerInfo.playerId) {
       videojs(FranklyVideoPlayerList[0].playerInfo.playerId).src(this.videoPlaylist[id]);
       videojs(FranklyVideoPlayerList[0].playerInfo.playerId).play(); // this is a hack. no update to analytics/etc.
@@ -73,25 +73,6 @@ class VideoModuleDemo extends Component {
     }
   }
 
-  async updateVideo1() {
-    console.log("*** updateVideo1()");
-    this.updateVideo(this.videoPlaylist[0]);
-  }
-	
-  async updateVideo2() {
-    console.log("*** updateVideo2()");
-// 	  this.updateVideo('https://channels-1.video.franklyinc.com/out/i/6989.m3u8');
-        this.updateVideo(this.videoPlaylist[1]);
-
-  }
-	
-  async updateVideo3() {
-        console.log("*** updateVideo3()");
-// 	  this.updateVideo('https://1cfed095bf82411d8d4a38bed11fa674.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA/83.m3u8');
-        this.updateVideo(this.videoPlaylist[2]);
-
-  }	
-  
   render(){
     return (
 <div className='VideoModuleDemo'>	
