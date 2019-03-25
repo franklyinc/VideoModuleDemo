@@ -16,35 +16,36 @@ class VideoModuleDemo extends Component {
   }
 
   componentDidMount() { // set initial video
-    //const url = 'https://channels-1.video.franklyinc.com/out/i/13265.m3u8';
-    const url = 'https://channels-1.video.franklyinc.com/out/i/15813.m3u8';
-    const wNVideoCanvasProps = [{
-      SetFlashLiveStream: [{
-        strUrl: url,
-        strHeadline: 'Livestream 1',
-        strAdTag: 'News',
-        hasPreroll: false,
-        strSummaryImageUrl: '',
-        mobileStreams: [{
-          url,
-          type: 'video/mp4'
-        }, {
-          url: '',
-          type: 'video/mp4'
-        }, {
-          url: '',
-          type: 'video/mp4'
-        }]
-      }]
-    }];
+//     //const url = 'https://channels-1.video.franklyinc.com/out/i/13265.m3u8';
+//     const url = 'https://channels-1.video.franklyinc.com/out/i/15813.m3u8';
+//     const wNVideoCanvasProps = [{
+//       SetFlashLiveStream: [{
+//         strUrl: url,
+//         strHeadline: 'Livestream 1',
+//         strAdTag: 'News',
+//         hasPreroll: false,
+//         strSummaryImageUrl: '',
+//         mobileStreams: [{
+//           url,
+//           type: 'video/mp4'
+//         }, {
+//           url: '',
+//           type: 'video/mp4'
+//         }, {
+//           url: '',
+//           type: 'video/mp4'
+//         }]
+//       }]
+//     }];
       
-    this.setState({
-      video: <Video clipId={1} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />
-    });
+//     this.setState({
+//       video: <Video clipId={1} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />
+//     });
+    this.updateVideo3();
   }
   
   async updateVideo1() {
-    
+    console.log("*** updateVideo1()");
 //     const url = 'https://channels-1.video.franklyinc.com/out/i/10755.m3u8';
     url = 'https://channels-1.video.franklyinc.com/out/i/15813.m3u8';
     const wNVideoCanvasProps = [{
@@ -80,6 +81,7 @@ class VideoModuleDemo extends Component {
   }
 	
   async updateVideo2() {
+    console.log("*** updateVideo2()");
     
     const url = 'https://channels-1.video.franklyinc.com/out/i/6989.m3u8';
     const wNVideoCanvasProps = [{
@@ -111,7 +113,8 @@ class VideoModuleDemo extends Component {
   }
 	
   async updateVideo3() {
-    
+        console.log("*** updateVideo3()");
+
 //     const url = 'https://channels-1.video.franklyinc.com/out/i/4926.m3u8';
     const url = 'https://1cfed095bf82411d8d4a38bed11fa674.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA/83.m3u8';
     const wNVideoCanvasProps = [{
