@@ -41,9 +41,14 @@ class VideoModuleDemo extends Component {
 //     this.setState({
 //       video: <Video clipId={1} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />
 //     });
-    this.updateVideo3();
+    this.updateVideo1();
   }
-  
+	
+  async clearVideo() {
+    videojs(FranklyVideoPlayerList[0].playerInfo.playerId).dispose();
+    await this.setState({ video: '' }); // clear the current video
+  }
+
   async updateVideo1() {
     console.log("*** updateVideo1()");
 //     const url = 'https://channels-1.video.franklyinc.com/out/i/10755.m3u8';
@@ -68,16 +73,13 @@ class VideoModuleDemo extends Component {
       }]
     }];
     
+    videojs(FranklyVideoPlayerList[0].playerInfo.playerId).dispose();
     await this.setState({ video: '' }); // clear the current video before setting a new one.
 
     // clipId is required if you are not using FRN_rawResponses
     this.setState({
       video: <Video clipId={1} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />  
     });
-  }
-	
-  async clearVideo() {
-    await this.setState({ video: '' }); // clear the current video
   }
 	
   async updateVideo2() {
@@ -104,6 +106,7 @@ class VideoModuleDemo extends Component {
       }]
     }];
     
+    videojs(FranklyVideoPlayerList[0].playerInfo.playerId).dispose();
     await this.setState({ video: '' }); // clear the current video before setting a new one.
 
     // clipId is required if you are not using FRN_rawResponses
@@ -137,6 +140,7 @@ class VideoModuleDemo extends Component {
       }]
     }];
     
+    videojs(FranklyVideoPlayerList[0].playerInfo.playerId).dispose();
     await this.setState({ video: '' }); // clear the current video before setting a new one.
 
     // clipId is required if you are not using FRN_rawResponses
@@ -177,7 +181,7 @@ class VideoModuleDemo extends Component {
 	    </td>
 	  </tr>
         </table>
-        <div className='' onClick={this.clearVideo}>Clear Video</div>
+        <div className='' onClick={this.clearVideo}>&nbsp;&nbsp;&nbsp;</div>
       </div>
     );
 	  
