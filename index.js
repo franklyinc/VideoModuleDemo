@@ -16,9 +16,9 @@ class VideoModuleDemo extends Component {
 
     this.videoPlaylist = [
       'https://channels-1.video.franklyinc.com/out/i/15813.m3u8',
-      'https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8',
+      'https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8',
       'https://1cfed095bf82411d8d4a38bed11fa674.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA/83.m3u8',
-      'https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8'
+      'https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8'
     ]
 
   }
