@@ -9,13 +9,13 @@ class VideoModuleDemo extends Component {
     };
     
     this.updateVideo = this.updateVideo.bind(this);
-    this.clearVideo = this.clearVideo.bind(this);
+    // this.clearVideo = this.clearVideo.bind(this);
     
     // 	  this.updateVideo('https://channels-1.video.franklyinc.com/out/i/6989.m3u8');
     // 	  this.updateVideo('https://1cfed095bf82411d8d4a38bed11fa674.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA/83.m3u8');
 
     this.videoPlaylist = [
-      'https://channels-1.video.franklyinc.com/out/i/15813.m3u8',
+      'https://channels-1.video.franklyinc.com/out/i/15812.m3u8',
       'https://channels-1.video.franklyinc.com/out/i/19735.m3u8',
       'https://f3ba597f7d4949af9ea7f7405594adea.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA-MediaPackage-Beta/index.m3u8',
       'https://1cfed095bf82411d8d4a38bed11fa674.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA/83.m3u8',
@@ -56,23 +56,33 @@ class VideoModuleDemo extends Component {
     });
   }
 	
-  async clearVideo() {
-    console.log("*** clearVideo()");
-    if (FranklyVideoPlayerList && FranklyVideoPlayerList[0] && FranklyVideoPlayerList[0].playerInfo && FranklyVideoPlayerList[0].playerInfo.playerId) {
-	videojs(FranklyVideoPlayerList[0].playerInfo.playerId).dispose();
-        FranklyVideoPlayerList[0].enabled = false;
-        FranklyVideoPlayerList.splice(0,1);
-	await this.setState({ video: '' }); // clear the current video
-    }
-  }
+  // async clearVideo() {
+  //   console.log("*** clearVideo()");
+  //   if (FranklyVideoPlayerList && FranklyVideoPlayerList[0] && FranklyVideoPlayerList[0].playerInfo && FranklyVideoPlayerList[0].playerInfo.playerId) {
+	//        videojs(FranklyVideoPlayerList[0].playerInfo.playerId).dispose();
+  //        FranklyVideoPlayerList[0].enabled = false;
+  //        FranklyVideoPlayerList.splice(0,1);
+	//        await this.setState({ video: '' }); // clear the current video
+  //   }
+  // }
   
   async updateVideo(id) {
     console.log("*** updateVideo(), id:", id + " url: " + this.videoPlaylist[id]);
     if (FranklyVideoPlayerList && FranklyVideoPlayerList[0] && FranklyVideoPlayerList[0].playerInfo && FranklyVideoPlayerList[0].playerInfo.playerId) {
-      videojs(FranklyVideoPlayerList[0].playerInfo.playerId).src(this.videoPlaylist[id]);
-      videojs(FranklyVideoPlayerList[0].playerInfo.playerId).play(); // this is a hack. no update to analytics/etc.
-//       FranklyVideoPlayerList[0].playerInfo.canFireResumeAfterPause = false;
-//       FranklyVideoPlayerList[0].playerInfo.loadInitialVideo(true);
+
+//       videojs(FranklyVideoPlayerList[0].playerInfo.playerId).src(this.videoPlaylist[id]);
+//       videojs(FranklyVideoPlayerList[0].playerInfo.playerId).play(); // this is a hack. no update to analytics/etc.
+// //       FranklyVideoPlayerList[0].playerInfo.canFireResumeAfterPause = false;
+// //       FranklyVideoPlayerList[0].playerInfo.loadInitialVideo(true);
+
+      var franklyStreamPlayer = FranklyVideoPlayerList[0].playerInfo;
+      var player_id = franklyStreamPlayer.playerId;
+      console.log("*** updateVideo :: franklyStreamPlayer : ", franklyStreamPlayer);
+      console.log("*** updateVideo :: this.videoPlaylist[id] : ", this.videoPlaylist[id]);
+      
+      franklyStreamPlayer.currentClip.content[0].src = this.videoPlaylist[id];
+      franklyStreamPlayer.vars.liveStreamUrl = this.videoPlaylist[id];
+      franklyStreamPlayer.loadInitialVideo(true);  // true == force autoplay
     }
   }
 
@@ -100,7 +110,7 @@ class VideoModuleDemo extends Component {
           <br/>Stream 3
 	      </div>
 	   </div>
-	</div>	    
+	</div>
 </div>
     );
 	  
