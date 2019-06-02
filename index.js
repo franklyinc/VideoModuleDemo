@@ -7,10 +7,10 @@ class VideoModuleDemo extends Component {
     this.state = {
       video: ''
     };
-    
+
     this.updateVideo = this.updateVideo.bind(this);
     // this.clearVideo = this.clearVideo.bind(this);
-    
+
     // 	  this.updateVideo('https://channels-1.video.franklyinc.com/out/i/6989.m3u8');
     // 	  this.updateVideo('https://1cfed095bf82411d8d4a38bed11fa674.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA/83.m3u8');
 
@@ -24,7 +24,7 @@ class VideoModuleDemo extends Component {
     ]
 
   }
-  shouldComponentUpdate() { 
+  shouldComponentUpdate() {
     console.log("*** shouldComponentUpdate()");
   	return false;
   }
@@ -50,12 +50,12 @@ class VideoModuleDemo extends Component {
         }]
       }]
     }];
-      
+
     this.setState({
       video: <Video clipId={1} autoPlay={true} wNVideoCanvasProps={wNVideoCanvasProps} />
     });
   }
-	
+
   // async clearVideo() {
   //   console.log("*** clearVideo()");
   //   if (FranklyVideoPlayerList && FranklyVideoPlayerList[0] && FranklyVideoPlayerList[0].playerInfo && FranklyVideoPlayerList[0].playerInfo.playerId) {
@@ -65,7 +65,7 @@ class VideoModuleDemo extends Component {
 	//        await this.setState({ video: '' }); // clear the current video
   //   }
   // }
-  
+
   async updateVideo(id) {
     console.log("*** updateVideo(), id:", id + " url: " + this.videoPlaylist[id]);
     if (FranklyVideoPlayerList && FranklyVideoPlayerList[0] && FranklyVideoPlayerList[0].playerInfo && FranklyVideoPlayerList[0].playerInfo.playerId) {
@@ -75,13 +75,13 @@ class VideoModuleDemo extends Component {
 // //       FranklyVideoPlayerList[0].playerInfo.canFireResumeAfterPause = false;
 // //       FranklyVideoPlayerList[0].playerInfo.loadInitialVideo(true);
 
-      autoplayPossible = true; // fix for Chrome to play on second video
+      autoplayPossible = true; // hack fix for Chrome to play on second video. can be removed after forceAutoplay is added in legacy PR #487
       var franklyStreamPlayer = FranklyVideoPlayerList[0].playerInfo;
       var player_id = franklyStreamPlayer.playerId;
       console.log("*** updateVideo :: franklyStreamPlayer : ", franklyStreamPlayer);
       console.log("*** updateVideo :: this.videoPlaylist[id] : ", this.videoPlaylist[id]);
-      
-      franklyStreamPlayer.currentClip.content[0].src = this.videoPlaylist[id];
+
+      // franklyStreamPlayer.currentClip.content[0].src = this.videoPlaylist[id]; // this is already set at the end of loadClip
       franklyStreamPlayer.vars.liveStreamUrl = this.videoPlaylist[id];
       franklyStreamPlayer.loadInitialVideo(true);  // true == force autoplay
     }
@@ -89,13 +89,13 @@ class VideoModuleDemo extends Component {
 
   render(){
     return (
-<div className='VideoModuleDemo'>	
-	    
+<div className='VideoModuleDemo'>
+
 	<div className="vidContainer">
 	  <div className="vidMain"><span className='VideoModuleDemo-Video'>{this.state.video}</span></div>
 	  <div className="vid1">
 	    <div className='VideoModuleDemo-Thumb VideoModuleDemo-Thumb1' onClick={() => this.updateVideo(0)}>
-        <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYwIDYwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MCA2MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI2NHB4IiBoZWlnaHQ9IjY0cHgiPgo8cGF0aCBkPSJNMzAsMEMxMy40NTgsMCwwLDEzLjQ1OCwwLDMwczEzLjQ1OCwzMCwzMCwzMHMzMC0xMy40NTgsMzAtMzBTNDYuNTQyLDAsMzAsMHogTTQ1LjU2MywzMC44MjZsLTIyLDE1ICBDMjMuMzk0LDQ1Ljk0MSwyMy4xOTcsNDYsMjMsNDZjLTAuMTYsMC0wLjMyMS0wLjAzOC0wLjQ2Ny0wLjExNkMyMi4yMDUsNDUuNzExLDIyLDQ1LjM3MSwyMiw0NVYxNWMwLTAuMzcxLDAuMjA1LTAuNzExLDAuNTMzLTAuODg0ICBjMC4zMjgtMC4xNzQsMC43MjQtMC4xNSwxLjAzMSwwLjA1OGwyMiwxNUM0NS44MzYsMjkuMzYsNDYsMjkuNjY5LDQ2LDMwUzQ1LjgzNiwzMC42NCw0NS41NjMsMzAuODI2eiIgZmlsbD0iI0ZGRkZGRiIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />	      
+        <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYwIDYwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MCA2MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI2NHB4IiBoZWlnaHQ9IjY0cHgiPgo8cGF0aCBkPSJNMzAsMEMxMy40NTgsMCwwLDEzLjQ1OCwwLDMwczEzLjQ1OCwzMCwzMCwzMHMzMC0xMy40NTgsMzAtMzBTNDYuNTQyLDAsMzAsMHogTTQ1LjU2MywzMC44MjZsLTIyLDE1ICBDMjMuMzk0LDQ1Ljk0MSwyMy4xOTcsNDYsMjMsNDZjLTAuMTYsMC0wLjMyMS0wLjAzOC0wLjQ2Ny0wLjExNkMyMi4yMDUsNDUuNzExLDIyLDQ1LjM3MSwyMiw0NVYxNWMwLTAuMzcxLDAuMjA1LTAuNzExLDAuNTMzLTAuODg0ICBjMC4zMjgtMC4xNzQsMC43MjQtMC4xNSwxLjAzMSwwLjA1OGwyMiwxNUM0NS44MzYsMjkuMzYsNDYsMjkuNjY5LDQ2LDMwUzQ1LjgzNiwzMC42NCw0NS41NjMsMzAuODI2eiIgZmlsbD0iI0ZGRkZGRiIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
         <br/>Stream 1
 		  </div>
 	  </div>
@@ -114,7 +114,7 @@ class VideoModuleDemo extends Component {
 	</div>
 </div>
     );
-	  
+
   }
 }
 
