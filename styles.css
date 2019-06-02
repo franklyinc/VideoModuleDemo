@@ -11,7 +11,8 @@
 }
 @media (max-width: 768px) {
   .vidContainer {
-    backgroundColor: red;
+    display: block;
+    background-color: red;
     padding: 16px;
     margin: 16px;
   }
