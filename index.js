@@ -111,7 +111,7 @@ class VideoModuleDemo extends Component {
 
   render(){
 
-    var vidContainerStyles = {
+    this.vidContainerStyles = {
       display: 'grid',
       width: '100%',
       height: '100%',
@@ -124,8 +124,8 @@ class VideoModuleDemo extends Component {
 
     var vidList = this.props.streamUrls.map(function(streamUrl, index){
 
-      vidContainerStyles.gridTemplateAreas += "'main' 'vid" + index + "' ";
-      vidContainerStyles.gridTemplateRows += "1fr ";
+      this.vidContainerStyles.gridTemplateAreas += "'main' 'vid" + index + "' ";
+      this.vidContainerStyles.gridTemplateRows += "1fr ";
 
       var vidThumbStyles = {
         height: '100%',
@@ -152,9 +152,11 @@ class VideoModuleDemo extends Component {
       );
     }.bind(this));
 
+    console.log("*** this.vidContainerStyles: ", this.vidContainerStyles);
+
     return (
 <div className='VideoModuleDemo'>
-	<div className="vidContainer" style={vidContainerStyles}>
+	<div className="vidContainer" style={this.vidContainerStyles}>
 	  <div className="vidMain" style={{gridArea: 'main'}}><span className='VideoModuleDemo-Video'>{this.state.video}</span></div>
     {vidList}
 	</div>
