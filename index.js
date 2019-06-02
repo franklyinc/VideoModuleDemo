@@ -4,16 +4,16 @@ import Video from 'components/media/Video';
 class VideoModuleDemo extends Component {
   static defaultProps = {
     "titles": [
-      // "Vid1",
-      // "Vid2"
+      "Stream 1",
+      "Stream 2"
     ],
     "streamUrls": [
-      // "https://channels-1.video.franklyinc.com/out/i/15812.m3u8",
-      // "https://channels-1.video.franklyinc.com/out/i/19735.m3u8"
+      "https://channels-1.video.franklyinc.com/out/i/15812.m3u8",
+      "https://channels-1.video.franklyinc.com/out/i/19735.m3u8"
     ],
     "posterUrls": [
-      // "https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg",
-      // "https://FRANKLYDEMO.images.worldnow.com/images/18018385_G.jpeg"
+      "https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg",
+      "https://FRANKLYDEMO.images.worldnow.com/images/18018385_G.jpeg"
     ]
   }
 
