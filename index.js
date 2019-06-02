@@ -2,6 +2,24 @@ import React, { Component, PropTypes } from 'react';
 import Video from 'components/media/Video';
 
 class VideoModuleDemo extends Component {
+  static defaultProps = {
+    "titles": [
+      "Vid1",
+      "Vid2",
+      "Vid3"
+    ],
+    "streamUrls": [
+      "https://channels-1.video.franklyinc.com/out/i/15812.m3u8",
+      "https://channels-1.video.franklyinc.com/out/i/19735.m3u8",
+      "https://f3ba597f7d4949af9ea7f7405594adea.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA-MediaPackage-Beta/index.m3u8"
+    ],
+    "posterUrls": [
+      "https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg",
+      "https://FRANKLYDEMO.images.worldnow.com/images/18018385_G.jpeg",
+      "https://FRANKLYDEMO.images.worldnow.com/images/18055016_G.jpeg"
+    ]
+  }
+
   constructor(props) {
     super(props);
     this.state = {
