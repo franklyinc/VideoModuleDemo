@@ -115,18 +115,7 @@ class VideoModuleDemo extends Component {
   render(){
 
     this.vidContainerStyles = {
-      display: 'grid',
-      width: '100%',
-      height: '100%',
-      gridTemplateAreas: "", // will be dynamically generated below in streamUrls map
-      gridTemplateColumns: '3fr 1fr', // 75%, 25%
-      gridTemplateRows: "repeat(3, 1fr)", // 3 rows minimum. rest will be dynamically generated below in streamUrls map
-      gridRowGap: '16px',
-      rowGap: '16px',
-      columnGap: '16px',
-      @media (max-width: 768px) {
-        backgroundColor: "red";
-      }
+      gridTemplateAreas: ""
     };
 
     var vidList = this.props.streamUrls.map(function(streamUrl, index){
