@@ -12,31 +12,8 @@
 .vidMain {
   grid-area: main;
 }
-.vid1 {
+.vid1, .vid2, .vid3 {
   grid-area: vid1;
-}
-.vid2 {
-  grid-area: vid2;
-}
-.vid3 {
-  grid-area: vid3;
-}
-
-
-
-
-.VideoModuleDemo-Table {
-  width: 100%;
-  height: 100%;
-}
-
-.VideoModuleDemo-col1 {
-  width: 75%;
-}
-
-.VideoModuleDemo-col2 {
-  width: 25%;
-  height:100%;  
 }
 
 .VideoModuleDemo-Thumb {
@@ -61,17 +38,4 @@
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   border-bottom: 16px solid #fff;
-}
-.VideoModuleDemo-Thumb2 {
-  background-image: linear-gradient(0deg,rgba(0,0,0,.5),transparent), url("https://FRANKLYDEMO.images.worldnow.com/images/18018385_G.jpeg");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-}
-.VideoModuleDemo-Thumb3 {
-  background-image: linear-gradient(0deg,rgba(0,0,0,.5),transparent), url("https://FRANKLYDEMO.images.worldnow.com/images/18055016_G.jpeg");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  border-top: 16px solid #fff;
 }
