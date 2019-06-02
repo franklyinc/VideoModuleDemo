@@ -124,7 +124,7 @@ class VideoModuleDemo extends Component {
 
     var vidList = this.props.streamUrls.map(function(streamUrl, index){
 
-      this.vidContainerStyles.gridTemplateAreas += "'main' 'vid" + index + "' ";
+      this.vidContainerStyles.gridTemplateAreas += "'main vid" + index + "' ";
       this.vidContainerStyles.gridTemplateRows += "1fr ";
 
       var vidThumbStyles = {
