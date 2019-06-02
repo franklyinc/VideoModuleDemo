@@ -151,8 +151,10 @@ class VideoModuleDemo extends Component {
       );
     }.bind(this));
 
-    if (this.props.streamUrls.length < 3) {
-      this.vidContainerStyles.gridTemplateAreas += "'main .'";
+    for (var i = 1; i <= 3; i++) { // add empty cells if less than 3 streams
+      if (this.props.streamUrls.length < i) {
+        this.vidContainerStyles.gridTemplateAreas += "'main .'";
+      }
     }
 
     console.log("*** this.vidContainerStyles: ", this.vidContainerStyles);
