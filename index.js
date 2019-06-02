@@ -123,7 +123,7 @@ class VideoModuleDemo extends Component {
     	  </div>
 
       );
-    });
+    }.bind(this));
 
     return (
 <div className='VideoModuleDemo'>
