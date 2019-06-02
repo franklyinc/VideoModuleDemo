@@ -112,7 +112,9 @@ class VideoModuleDemo extends Component {
   render(){
 
     var vidList = this.props.streamUrls.map(function(streamUrl, index){
-      return <li>{index} - {streamUrl}</li>;
+      return (
+        <li>{index} - {streamUrl}</li>
+      );
     });
 
     return (
