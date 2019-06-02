@@ -6,16 +6,19 @@ class VideoModuleDemo extends Component {
     "titles": [
       "Stream 1",
       "Stream 2",
-      "Stream 3"
+      "Stream 3",
+      "Stream 4",
     ],
     "streamUrls": [
       "https://channels-1.video.franklyinc.com/out/i/15812.m3u8",
       "https://channels-1.video.franklyinc.com/out/i/19735.m3u8",
       "https://f3ba597f7d4949af9ea7f7405594adea.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA-MediaPackage-Beta/index.m3u8",
+      "https://f3ba597f7d4949af9ea7f7405594adea.mediatailor.us-east-1.amazonaws.com/v1/master/1d83eb30e3b0c3924fb4496062b92664bd531371/Fox-WAGA-MediaPackage-Beta/index.m3u8",
     ],
     "posterUrls": [
       "https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg",
       "https://FRANKLYDEMO.images.worldnow.com/images/18018385_G.jpeg",
+      "https://FRANKLYDEMO.images.worldnow.com/images/18055016_G.jpeg",
       "https://FRANKLYDEMO.images.worldnow.com/images/18055016_G.jpeg",
     ]
   }
@@ -117,7 +120,7 @@ class VideoModuleDemo extends Component {
       height: '100%',
       gridTemplateAreas: "", // will be dynamically generated below in streamUrls map
       gridTemplateColumns: '75% 25%',
-      gridTemplateRows: "1fr 1fr 1fr ", // 3 rows minimum. rest will be dynamically generated below in streamUrls map
+      gridTemplateRows: "repeat(3, 1fr)", // 3 rows minimum. rest will be dynamically generated below in streamUrls map
       gridRowGap: '16px',
       rowGap: '16px'
     };
