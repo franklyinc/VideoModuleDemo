@@ -114,7 +114,7 @@ class VideoModuleDemo extends Component {
       height: '100%',
       gridTemplateAreas: "", // will be dynamically generated below in streamUrls map
       gridTemplateColumns: '75% 25%',
-      gridTemplateRows: "", // will be dynamically generated below in streamUrls map
+      gridTemplateRows: "1fr 1fr 1fr ", // 3 rows minimum. rest will be dynamically generated below in streamUrls map
       gridRowGap: '16px',
       rowGap: '16px'
     };
@@ -122,6 +122,8 @@ class VideoModuleDemo extends Component {
     var vidList = this.props.streamUrls.map(function(streamUrl, index){
 
       this.vidContainerStyles.gridTemplateAreas += "'main vid" + index + "' ";
+
+      console.log("this.props.streamUrls.length: ", this.props.streamUrls.length)
       this.vidContainerStyles.gridTemplateRows += "1fr ";
 
       var vidThumbStyles = {
