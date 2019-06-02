@@ -160,7 +160,7 @@ class VideoModuleDemo extends Component {
       <div className='VideoModuleDemo'>
       	<div className="vidContainer" style={this.vidContainerStyles}>
       	  <div className="vidMain" style={{gridArea: 'main'}}><span className='VideoModuleDemo-Video'>{this.state.video}</span></div>
-          <div className="vidThumbContainer">{vidList}</div>
+          {vidList}
       	</div>
       </div>
     );
