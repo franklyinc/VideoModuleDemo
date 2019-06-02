@@ -117,7 +117,8 @@ class VideoModuleDemo extends Component {
       height: '100%',
       gridTemplateAreas: "", // will be dynamically generated below in streamUrls map
       gridTemplateColumns: '66% 33%',
-x    };
+      gridTemplateRows: "" // will be dynamically generated below in streamUrls map
+    };
 
     var vidList = this.props.streamUrls.map(function(streamUrl, index){
 
