@@ -75,6 +75,7 @@ class VideoModuleDemo extends Component {
 // //       FranklyVideoPlayerList[0].playerInfo.canFireResumeAfterPause = false;
 // //       FranklyVideoPlayerList[0].playerInfo.loadInitialVideo(true);
 
+      autoplayPossible = true; // fix for Chrome to play on second video
       var franklyStreamPlayer = FranklyVideoPlayerList[0].playerInfo;
       var player_id = franklyStreamPlayer.playerId;
       console.log("*** updateVideo :: franklyStreamPlayer : ", franklyStreamPlayer);
