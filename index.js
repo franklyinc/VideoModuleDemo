@@ -116,8 +116,10 @@ class VideoModuleDemo extends Component {
       width: '100%',
       height: '100%',
       gridTemplateAreas: "", // will be dynamically generated below in streamUrls map
-      gridTemplateColumns: '66% 33%',
-      gridTemplateRows: "" // will be dynamically generated below in streamUrls map
+      gridTemplateColumns: '80% 20%',
+      gridTemplateRows: "", // will be dynamically generated below in streamUrls map
+      gridRowGap: '16px',
+      rowGap: '16px'
     };
 
     var vidList = this.props.streamUrls.map(function(streamUrl, index){
@@ -137,7 +139,6 @@ class VideoModuleDemo extends Component {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        borderBottom: '16px solid #fff'
       }
       return (
 
