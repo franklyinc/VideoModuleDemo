@@ -129,7 +129,7 @@ class VideoModuleDemo extends Component {
 
 	<div className="vidContainer">
 	  <div className="vidMain"><span className='VideoModuleDemo-Video'>{this.state.video}</span></div>
-     <div>{vidList}</div>
+    {vidList}
 	</div>
 </div>
     );
