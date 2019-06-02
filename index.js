@@ -121,8 +121,9 @@ class VideoModuleDemo extends Component {
 
     var vidList = this.props.streamUrls.map(function(streamUrl, index){
 
+      this.vidContainerStyles.gridTemplateAreas += "'main vid" + index + "' ";
+
       if (this.props.streamUrls.length > 3 && index > 2) { // add extra 4th row
-        this.vidContainerStyles.gridTemplateAreas += "'main vid" + index + "' ";
         this.vidContainerStyles.gridTemplateRows += "1fr ";
       }
 
