@@ -121,7 +121,7 @@ class VideoModuleDemo extends Component {
     		  </div>
     	  </div>
 
-        <li>1 : {index} - {streamUrl}</li>
+        <div><li>{index} - {streamUrl}</li></div>
       );
     });
 
@@ -148,7 +148,7 @@ class VideoModuleDemo extends Component {
           <br/>{this.props.titles[2]}
 	      </div>
 	   </div>
-     <div><ul>{vidList}</ul></div>
+     <div>{vidList}</div>
 	</div>
 </div>
     );
