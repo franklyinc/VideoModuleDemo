@@ -111,11 +111,20 @@ class VideoModuleDemo extends Component {
 
   render(){
 
+    var vidContainerStyles = {
+      display: 'grid',
+      width: '100%',
+      height: '100%',
+      gridTemplateAreas: "'main vid0' 'main vid1' 'main vid2'",
+      gridTemplateColumns: '75% 25%',
+      gridTemplateRows: '1fr 1fr 1fr'
+    };
+
     var vidList = this.props.streamUrls.map(function(streamUrl, index){
       return (
 
-        <div className="vid1">
-          <div className='VideoModuleDemo-Thumb' onClick={() => this.updateVideo(index)}>
+        <div className="vid1" style={{gridArea: 'vid' + index}} >
+          <div className='VideoModuleDemo-Thumb' onClick={() => this.updateVideo(index)} >
             <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYwIDYwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MCA2MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI2NHB4IiBoZWlnaHQ9IjY0cHgiPgo8cGF0aCBkPSJNMzAsMEMxMy40NTgsMCwwLDEzLjQ1OCwwLDMwczEzLjQ1OCwzMCwzMCwzMHMzMC0xMy40NTgsMzAtMzBTNDYuNTQyLDAsMzAsMHogTTQ1LjU2MywzMC44MjZsLTIyLDE1ICBDMjMuMzk0LDQ1Ljk0MSwyMy4xOTcsNDYsMjMsNDZjLTAuMTYsMC0wLjMyMS0wLjAzOC0wLjQ2Ny0wLjExNkMyMi4yMDUsNDUuNzExLDIyLDQ1LjM3MSwyMiw0NVYxNWMwLTAuMzcxLDAuMjA1LTAuNzExLDAuNTMzLTAuODg0ICBjMC4zMjgtMC4xNzQsMC43MjQtMC4xNSwxLjAzMSwwLjA1OGwyMiwxNUM0NS44MzYsMjkuMzYsNDYsMjkuNjY5LDQ2LDMwUzQ1LjgzNiwzMC42NCw0NS41NjMsMzAuODI2eiIgZmlsbD0iI0ZGRkZGRiIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
             <br/>{this.props.titles[index]}
           </div>
@@ -127,8 +136,8 @@ class VideoModuleDemo extends Component {
     return (
 <div className='VideoModuleDemo'>
 
-	<div className="vidContainer">
-	  <div className="vidMain"><span className='VideoModuleDemo-Video'>{this.state.video}</span></div>
+	<div className="vidContainer" style={vidContainerStyles}>
+	  <div className="vidMain" style={{gridArea: 'main'}}><span className='VideoModuleDemo-Video'>{this.state.video}</span></div>
     {vidList}
 	</div>
 </div>

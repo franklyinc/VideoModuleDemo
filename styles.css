@@ -1,20 +1,22 @@
-.vidContainer {
+/* .vidContainer {
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-areas: "main vid1"
-  "main vid2"
-  "main vid3";
+  grid-template-areas:
+    "main vid1"
+    "main vid2"
+    "main vid3";
   grid-template-columns: 75% 25%;
   grid-template-rows: 1fr 1fr 1fr;
-}
+} */
 
-.vidMain {
+/* .vidMain {
   grid-area: main;
-}
-.vid1, .vid2, .vid3 {
+} */
+
+/* .vid1, .vid2, .vid3 {
   grid-area: vid1;
-}
+} */
 
 .VideoModuleDemo-Thumb {
   height: 100%;
@@ -22,7 +24,7 @@
   font-weight: bold;
   font-size: 3em;
   margin-left: 16px;
-  color: #ffffff;
+  color: #666666;
   text-decoration: none;
 }
 
