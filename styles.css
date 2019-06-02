@@ -18,7 +18,7 @@
   grid-area: vid1;
 } */
 
-.VideoModuleDemo-Thumb {
+/* .VideoModuleDemo-Thumb {
   height: 100%;
   text-align: center;
   font-weight: bold;
@@ -26,18 +26,18 @@
   margin-left: 16px;
   color: #666666;
   text-decoration: none;
-}
+} */
 
-.VideoModuleDemo-Thumb img {
+/* .VideoModuleDemo-Thumb img {
   width:36px;
   height:36px;
-}
+} */
 
-.VideoModuleDemo-Thumb1 {
+/* .VideoModuleDemo-Thumb1 {
   xbackground-image: url("https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg");
-  background-image: linear-gradient(0deg,rgba(0,0,0,.5),transparent), url("https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg"); /* W3C */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-image: linear-gradient(0deg,rgba(0,0,0,.5),transparent), url("https://FRANKLYDEMO.images.worldnow.com/images/18020840_G.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-bottom: 16px solid #fff;
-}
+} */
