@@ -24,7 +24,8 @@
 .vidThumb img {
       width: 36px;
       height: 36px;
-      margin-top: 16px;
+      margin-top: 24px;
+      margin-bottom: 8px;
 }
 
 @media (max-width: 768px) {
