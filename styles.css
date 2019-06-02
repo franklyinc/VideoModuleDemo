@@ -9,6 +9,18 @@
   row-gap: 16px;
   column-gap: 16px;
 }
+.vidThumb  {
+  height: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 1em;
+  color: #fff;
+  text-decoration: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .vidThumb img {
       width: 36px;
       height: 36px;

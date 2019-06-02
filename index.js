@@ -127,17 +127,7 @@ class VideoModuleDemo extends Component {
       }
 
       var vidThumbStyles = {
-        height: '100%',
-        textAlign: 'center',
-        fontWeight: 'bold',
-        fontSize: '2em',
-        lineHeight: '1em',
-        color: '#fff',
-        textDecoration: 'none',
         backgroundImage: 'linear-gradient(0deg,rgba(0,0,0,.5),transparent), url("'+ this.props.posterUrls[index] +'")',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
       }
       return (
         <div style={{gridArea: 'vid' + index}} className="vidThumb">
