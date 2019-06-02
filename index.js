@@ -123,7 +123,10 @@ class VideoModuleDemo extends Component {
       gridTemplateRows: "repeat(3, 1fr)", // 3 rows minimum. rest will be dynamically generated below in streamUrls map
       gridRowGap: '16px',
       rowGap: '16px',
-      columnGap: '16px'
+      columnGap: '16px',
+      @media (max-width: 768px) {
+        backgroundColor: "red";
+      }
     };
 
     var vidList = this.props.streamUrls.map(function(streamUrl, index){
