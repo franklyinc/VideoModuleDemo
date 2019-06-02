@@ -116,7 +116,7 @@ class VideoModuleDemo extends Component {
       width: '100%',
       height: '100%',
       gridTemplateAreas: "", // will be dynamically generated below in streamUrls map
-      gridTemplateColumns: 'auto-fit 340px',
+      gridTemplateColumns: 'auto-fit 180px',
       gridTemplateRows: "", // will be dynamically generated below in streamUrls map
       gridRowGap: '16px',
       rowGap: '16px'
