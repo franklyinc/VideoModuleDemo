@@ -115,7 +115,9 @@ class VideoModuleDemo extends Component {
       return (
 
         <div className="vid1">
-          <div>{index} - {streamUrl}</div>
+          <div className='VideoModuleDemo-Thumb VideoModuleDemo-Thumb1' onClick={() => this.updateVideo(0)}>
+            <div>{index} - {streamUrl}</div>
+          </div>
     	  </div>
 
       );
