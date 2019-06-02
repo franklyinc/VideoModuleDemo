@@ -121,10 +121,10 @@ class VideoModuleDemo extends Component {
 
     var vidList = this.props.streamUrls.map(function(streamUrl, index){
 
-      this.vidContainerStyles.gridTemplateAreas += "'main vid" + index + "' ";
-
-      console.log("this.props.streamUrls.length: ", this.props.streamUrls.length)
-      this.vidContainerStyles.gridTemplateRows += "1fr ";
+      if (this.props.streamUrls.length > 3 && index > 2) { // add extra 4th row
+        this.vidContainerStyles.gridTemplateAreas += "'main vid" + index + "' ";
+        this.vidContainerStyles.gridTemplateRows += "1fr ";
+      }
 
       var vidThumbStyles = {
         height: '100%',
